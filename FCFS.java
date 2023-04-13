@@ -37,12 +37,12 @@ public class FCFS {
         System.out.println("\nHasil:");
         System.out.format(
                 "+-----------------+-----------------------+------------------+-------------------+-------------------+-------------------+%n");
-        System.out.format(" |%15s | %21s | %16s | %17s | %17s | %17s |%n", "Proses", "Waktu Kedatangan", "Waktu Burst",
+        System.out.format("|%15s  | %21s | %16s | %17s | %17s | %17s |%n", "Proses", "Waktu Kedatangan", "Waktu Burst",
                 "Waktu Selesai", "Waktu Tunggu", "Waktu Putar");
         System.out.format(
                 "+-----------------+-----------------------+------------------+-------------------+-------------------+-------------------+%n");
         for (int i = 0; i < n; i++) {
-            System.out.format(" |%15s | %21s | %16s | %17s | %17s | %17s |%n", (i + 1), arrivalTime[i], burstTime[i],
+            System.out.format("|%15s  | %21s | %16s | %17s | %17s | %17s |%n", (i + 1), arrivalTime[i], burstTime[i],
                     completionTime[i], waitingTime[i], turnAroundTime[i]);
             totalTurnAroundTime += turnAroundTime[i];
             totalWaitingTime += waitingTime[i];
@@ -52,6 +52,6 @@ public class FCFS {
         double averageTurnAroundTime = totalTurnAroundTime / n;
         double averageWaitingTime = totalWaitingTime / n;
         System.out.format("%-17s %-25.2f %-19s %-18.2f %-18s %-18.2f%n", "Waktu rata-rata putar:",
-                averageTurnAroundTime, "Waktu rata-rata tunggu:", averageWaitingTime);
+                averageTurnAroundTime, "\nWaktu rata-rata tunggu:", averageWaitingTime);
     }
 }
